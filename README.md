@@ -17,7 +17,7 @@ The problem I'm trying to solve is that there isn't a simple way for me to remem
 ## How It Works
 
 This program allows users to add new vocabulary, save them, organize them by courses, search a word, and also review the vocabulary based on courses. This program works with a plain text file.
-![System diagram](docs/System%20Diagram.png)
+![System diagram](System%20Diagram.png)
 
 ## Tech Stack
 
@@ -28,22 +28,10 @@ This program allows users to add new vocabulary, save them, organize them by cou
 
 ## Setup
 
-Step-by-step: how does someone who just cloned your repo get it
-running?
-
-```bash
-git clone https://github.com/you/your-project
-cd your-project
-./install.sh   # or whatever
-```
+(placeholder)
 
 ## Usage
-
-How to actually run the thing, with examples.
-
-```bash
-./backup.sh ~/Documents
-```
+(placeholder)
 
 ## Roadmap
 
