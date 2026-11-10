@@ -1,5 +1,9 @@
 public class Main {
+
     public static void main(String[] args) {
+
+        VocabFunctions vocabFunctions = new VocabFunctions();
+
         while (true) {
             IO.println("Academic Vocabulary Organizer");
             IO.println("------------------------------");
@@ -12,7 +16,7 @@ public class Main {
             String choice = IO.readln("Enter your choice:\n");
 
             switch (choice) {
-                case "1" -> IO.println("Added a new vocabulary\n");
+                case "1" -> vocabFunctions.addVocabulary();
                 case "2" -> IO.println("Searched an existing vocabulary\n");
                 case "3" -> IO.println("Viewed all vocabulary\n");
                 case "4" -> IO.println("Reviewed vocabulary by course\n");
