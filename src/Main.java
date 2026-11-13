@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         VocabFunctions vocabFunctions = new VocabFunctions();
+        vocabFunctions.load();
 
         while (true) {
             IO.println("Academic Vocabulary Organizer");
