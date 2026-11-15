@@ -53,4 +53,22 @@ public class VocabFunctions {
             IO.println("Error loading vocabulary!\n");
         }
     }
+
+    public void viewVocabulary() {
+        if (vocabList.isEmpty()) {
+            IO.println("No vocabulary found\n");
+            return;
+        }
+        IO.println("The following vocabulary were found:\n");
+
+        for (int i = 0; i < vocabList.size(); i++) {
+            Vocabulary vocab = vocabList.get(i);
+            IO.println("Vocabulary " + (i + 1));
+            IO.println("Word: " + vocab.getWord());
+            IO.println("Definition: " + vocab.getDefinition());
+            IO.println("Course: " + vocab.getCourse());
+            IO.println();
+        }
+        IO.println("Viewed all vocabulary.\n");
+    }
 }
