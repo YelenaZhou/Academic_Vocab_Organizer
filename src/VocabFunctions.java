@@ -18,8 +18,6 @@ public class VocabFunctions {
         vocabList.add(vocab);
 
         save();
-
-        IO.println("Successfully added a new vocabulary!\n");
     }
 
     public void save() {
@@ -50,13 +48,13 @@ public class VocabFunctions {
         } catch (FileNotFoundException e) {
             IO.println("No such file found.\n");
         } catch (IOException e) {
-            IO.println("Error loading vocabulary!\n");
+            IO.println("Error loading vocabulary.\n");
         }
     }
 
     public void viewVocabulary() {
         if (vocabList.isEmpty()) {
-            IO.println("No vocabulary found\n");
+            IO.println("No vocabulary found.\n");
             return;
         }
         IO.println("The following vocabulary were found:\n");
@@ -70,5 +68,26 @@ public class VocabFunctions {
             IO.println();
         }
         IO.println("Viewed all vocabulary.\n");
+    }
+
+    public void searchVocabulary() {
+        boolean found = false;
+        String search = IO.readln("Enter the word you want to search:\n");
+
+        for (int i = 0; i < vocabList.size(); i++) {
+            Vocabulary vocab = vocabList.get(i);
+            if (vocab.getWord().equalsIgnoreCase(search)) {
+                IO.println("Word: " + vocab.getWord());
+                IO.println("Definition: " + vocab.getDefinition());
+                IO.println("Course: " + vocab.getCourse() + "\n");
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            IO.println("Vocabulary not found.\n");
+        }
     }
 }

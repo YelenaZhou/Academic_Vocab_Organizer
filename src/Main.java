@@ -18,7 +18,7 @@ public class Main {
 
             switch (choice) {
                 case "1" -> vocabFunctions.addVocabulary();
-                case "2" -> IO.println("Searched an existing vocabulary\n");
+                case "2" -> vocabFunctions.searchVocabulary();
                 case "3" -> vocabFunctions.viewVocabulary();
                 case "4" -> IO.println("Reviewed vocabulary by course\n");
                 case "5" -> {
