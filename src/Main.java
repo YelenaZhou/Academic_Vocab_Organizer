@@ -20,7 +20,7 @@ public class Main {
                 case "1" -> vocabFunctions.addVocabulary();
                 case "2" -> vocabFunctions.searchVocabulary();
                 case "3" -> vocabFunctions.viewVocabulary();
-                case "4" -> IO.println("Reviewed vocabulary by course\n");
+                case "4" -> vocabFunctions.reviewVocabularyByCourse();
                 case "5" -> {
                     IO.println("Exit");
                     return;

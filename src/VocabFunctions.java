@@ -90,4 +90,24 @@ public class VocabFunctions {
             IO.println("Vocabulary not found.\n");
         }
     }
+
+    public void reviewVocabularyByCourse() {
+        boolean found = false;
+        String course = IO.readln("Enter the course you want to review:\n");
+
+        for (int i = 0; i < vocabList.size(); i++) {
+            Vocabulary vocab = vocabList.get(i);
+
+            if (vocab.getCourse().equalsIgnoreCase(course)) {
+                IO.println("Word: " + vocab.getWord());
+                IO.println("Definition: " + vocab.getDefinition());
+                IO.println("Course: " + vocab.getCourse());
+                IO.println();
+                found = true;
+            }
+        }
+        if (!found) {
+            IO.println("Vocabulary not found for this course.\n");
+        }
+    }
 }
